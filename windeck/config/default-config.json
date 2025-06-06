@@ -1,0 +1,47 @@
+{
+  "logging": {
+    "isDebugEnabled": true,
+    "minimumLevel": "Debug",
+    "logToFile": true,
+    "logFilePath": "logs/windeck.log",
+    "maxLogFileSizeMB": 10,
+    "maxLogFiles": 5,
+    "includeTimestamp": true,
+    "includeScopes": true
+  },
+  "hotkeys": {
+    "primary": "F10",
+    "modifiers": []
+  },
+  "appearance": {
+    "theme": "dark",
+    "opacity": 0.9,
+    "position": "cursor"
+  },
+  "shortcuts": {
+    "1": {
+      "label": "Calculator",
+      "icon": "calculator.png",
+      "action": {
+        "type": "application",
+        "path": "calc.exe"
+      }
+    },
+    "2": {
+      "label": "Notepad",
+      "icon": "notepad.png",
+      "action": {
+        "type": "application",
+        "path": "notepad.exe"
+      }
+    },
+    "3": {
+      "label": "Screenshot",
+      "icon": "camera.png",
+      "action": {
+        "type": "keystroke",
+        "keys": "Win+Shift+S"
+      }
+    }
+  }
+}
