@@ -90,16 +90,14 @@ public class HotkeyService : IHotkeyService
             }
             else
             {
-                uint error = GetLastError();
-                _logger.LogError("Failed to register hotkey {0}+{1} (ID: {2}). Error: {3}",
-                    modifiers, key, id, error);
+                uint error = GetLastError();                _logger.LogError("Failed to register hotkey {Modifiers}+{Key} (ID: {Id}). Error: {Error}",
+                    null, modifiers, key, id, error);
                 return false;
             }
         }
         catch (Exception ex)
-        {
-            _logger.LogError("Exception registering hotkey {0}+{1} (ID: {2}): {3}",
-                modifiers, key, id, ex.Message);
+        {            _logger.LogError("Exception registering hotkey {Modifiers}+{Key} (ID: {Id}): {Message}",
+                ex, modifiers, key, id, ex.Message);
             return false;
         }
     }
@@ -132,13 +130,13 @@ public class HotkeyService : IHotkeyService
             else
             {
                 uint error = GetLastError();
-                _logger.LogError("Failed to unregister hotkey ID {0}. Error: {1}", id, error);
+                _logger.LogError("Failed to unregister hotkey ID {Id}. Error: {Error}", null, id, error);
                 return false;
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError("Exception unregistering hotkey ID {0}: {1}", id, ex.Message);
+            _logger.LogError("Exception unregistering hotkey ID {Id}: {Message}", ex, id, ex.Message);
             return false;
         }
     }
@@ -241,7 +239,7 @@ public class HotkeyService : IHotkeyService
         }
         catch (Exception ex)
         {
-            _logger.LogError("Exception handling hotkey message: {0}", ex.Message);
+            _logger.LogError("Exception handling hotkey message: {Message}", ex, ex.Message);
         }
     }
 

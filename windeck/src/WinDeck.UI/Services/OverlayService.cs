@@ -82,7 +82,7 @@ public class OverlayService : IOverlayService
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error showing overlay: {0}", ex.Message);
+                _logger.LogError("Error showing overlay: {Message}", ex, ex.Message);
             }
         });
     }
@@ -108,7 +108,7 @@ public class OverlayService : IOverlayService
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error hiding overlay: {0}", ex.Message);
+                _logger.LogError("Error hiding overlay: {Message}", ex, ex.Message);
             }
         });
     }
@@ -207,7 +207,7 @@ public class OverlayService : IOverlayService
         }
         catch (Exception ex)
         {
-            _logger.LogError("Error creating overlay window: {0}", ex.Message);
+            _logger.LogError("Error creating overlay window: {Message}", ex, ex.Message);
         }
     }
 

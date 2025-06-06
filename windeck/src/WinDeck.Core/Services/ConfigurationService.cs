@@ -69,7 +69,7 @@ public class ConfigurationService : IConfigurationService
 
             if (loadedConfig == null)
             {
-                _logger.LogError("Failed to deserialize configuration from {0}", path);
+                _logger.LogError("Failed to deserialize configuration from {Path}", null, path);
                 return false;
             }
 
@@ -77,13 +77,13 @@ public class ConfigurationService : IConfigurationService
             var validationResult = ValidateConfiguration(loadedConfig);
             if (!validationResult.IsValid)
             {
-                _logger.LogError("Loaded configuration is invalid: {0}", string.Join(", ", validationResult.Errors));
+                _logger.LogError("Loaded configuration is invalid: {Errors}", null, string.Join(", ", validationResult.Errors));
                 return false;
             }
 
             if (validationResult.HasWarnings)
             {
-                _logger.LogWarning("Configuration has warnings: {0}", string.Join(", ", validationResult.Warnings));
+                _logger.LogWarning("Configuration has warnings: {Warnings}", string.Join(", ", validationResult.Warnings));
             }
 
             var oldConfig = _current;
@@ -96,7 +96,7 @@ public class ConfigurationService : IConfigurationService
         }
         catch (Exception ex)
         {
-            _logger.LogError("Error loading configuration from {0}: {1}", path, ex.Message);
+            _logger.LogError("Error loading configuration from {Path}: {Message}", ex, path, ex.Message);
             return false;
         }
     }
@@ -141,7 +141,7 @@ public class ConfigurationService : IConfigurationService
         }
         catch (Exception ex)
         {
-            _logger.LogError("Error saving configuration to {0}: {1}", path, ex.Message);
+            _logger.LogError("Error saving configuration to {Path}: {Message}", ex, path, ex.Message);
             return false;
         }
     }
@@ -211,7 +211,7 @@ public class ConfigurationService : IConfigurationService
     {
         if (!File.Exists(backupFilePath))
         {
-            _logger.LogError("Backup file not found: {0}", backupFilePath);
+            _logger.LogError("Backup file not found: {BackupFilePath}", null, backupFilePath);
             return false;
         }
 
@@ -306,7 +306,7 @@ public class ConfigurationService : IConfigurationService
         {
             result.Errors.Add($"Validation error: {ex.Message}");
             result.IsValid = false;
-            _logger.LogError("Configuration validation failed: {0}", ex.Message);
+            _logger.LogError("Configuration validation failed: {Message}", ex, ex.Message);
         }
 
         return result;
@@ -372,7 +372,7 @@ public class ConfigurationService : IConfigurationService
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error saving configuration during dispose: {0}", ex.Message);
+                _logger.LogError("Error saving configuration during dispose: {Message}", ex, ex.Message);
             }
 
             _disposed = true;

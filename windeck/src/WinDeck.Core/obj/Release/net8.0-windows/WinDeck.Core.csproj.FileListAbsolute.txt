@@ -1,0 +1,13 @@
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.csproj.AssemblyReference.cache
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.AssemblyInfoInputs.cache
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.AssemblyInfo.cs
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.csproj.CoreCompileInputs.cache
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.sourcelink.json
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\bin\Release\net8.0-windows\WinDeck.Core.deps.json
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\bin\Release\net8.0-windows\WinDeck.Core.dll
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\bin\Release\net8.0-windows\WinDeck.Core.pdb
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.dll
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\refint\WinDeck.Core.dll
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\WinDeck.Core.pdb
+D:\Projects\pww\windowsapps\windeck\src\WinDeck.Core\obj\Release\net8.0-windows\ref\WinDeck.Core.dll

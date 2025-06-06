@@ -1,4 +1,4 @@
-&lt;Window x:Class="WinDeck.UI.Windows.OverlayWindow"
+<Window x:Class="WinDeck.UI.Windows.OverlayWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="WinDeck"
@@ -12,46 +12,46 @@
         WindowStartupLocation="CenterScreen"
         Opacity="0"
         KeyDown="Window_KeyDown"
-        Deactivated="Window_Deactivated"&gt;
+        Deactivated="Window_Deactivated">
 
-    &lt;Window.Resources&gt;
-        &lt;!-- Converter for visibility --&gt;
-        &lt;BooleanToVisibilityConverter x:Key="BoolToVisConverter" /&gt;
+    <Window.Resources>
+        <!-- Converter for visibility -->
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
 
-        &lt;!-- Button style --&gt;
-        &lt;Style TargetType="Button" x:Key="ShortcutButtonStyle"&gt;
-            &lt;Setter Property="Background" Value="#404040" /&gt;
-            &lt;Setter Property="Foreground" Value="White" /&gt;
-            &lt;Setter Property="BorderBrush" Value="#007ACC" /&gt;
-            &lt;Setter Property="BorderThickness" Value="1" /&gt;
-            &lt;Setter Property="Margin" Value="2" /&gt;
-            &lt;Setter Property="Padding" Value="5" /&gt;
-            &lt;Setter Property="FontSize" Value="12" /&gt;
-            &lt;Setter Property="FontWeight" Value="SemiBold" /&gt;
-            &lt;Setter Property="Cursor" Value="Hand" /&gt;
-            &lt;Setter Property="Template"&gt;
-                &lt;Setter.Value&gt;
-                    &lt;ControlTemplate TargetType="Button"&gt;
-                        &lt;Border Background="{TemplateBinding Background}"
+        <!-- Button style -->
+        <Style TargetType="Button" x:Key="ShortcutButtonStyle">
+            <Setter Property="Background" Value="#404040" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderBrush" Value="#007ACC" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="4"&gt;
-                            &lt;Grid&gt;
-                                &lt;Grid.RowDefinitions&gt;
-                                    &lt;RowDefinition Height="Auto" /&gt;
-                                    &lt;RowDefinition Height="*" /&gt;
-                                &lt;/Grid.RowDefinitions&gt;
+                                CornerRadius="4">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
 
-                                &lt;TextBlock Text="{Binding Number}"
+                                <TextBlock Text="{Binding Number}"
                                           Grid.Row="0"
                                           HorizontalAlignment="Right"
                                           VerticalAlignment="Top"
                                           FontSize="10"
                                           FontWeight="Bold"
                                           Foreground="#CCCCCC"
-                                          Margin="0,2,4,0" /&gt;
+                                          Margin="0,2,4,0" />
 
-                                &lt;TextBlock Text="{Binding Name}"
+                                <TextBlock Text="{Binding Name}"
                                           Grid.Row="1"
                                           HorizontalAlignment="Center"
                                           VerticalAlignment="Center"
@@ -60,52 +60,52 @@
                                           Foreground="{TemplateBinding Foreground}"
                                           FontSize="{TemplateBinding FontSize}"
                                           FontWeight="{TemplateBinding FontWeight}"
-                                          Margin="{TemplateBinding Padding}" /&gt;
-                            &lt;/Grid&gt;
-                        &lt;/Border&gt;
-                        &lt;ControlTemplate.Triggers&gt;
-                            &lt;Trigger Property="IsMouseOver" Value="True"&gt;
-                                &lt;Setter Property="Background" Value="#505050" /&gt;
-                                &lt;Setter Property="BorderBrush" Value="#00A0FF" /&gt;
-                            &lt;/Trigger&gt;
-                            &lt;Trigger Property="IsPressed" Value="True"&gt;
-                                &lt;Setter Property="Background" Value="#606060" /&gt;
-                            &lt;/Trigger&gt;
-                            &lt;Trigger Property="IsEnabled" Value="False"&gt;
-                                &lt;Setter Property="Background" Value="#2A2A2A" /&gt;
-                                &lt;Setter Property="Foreground" Value="#666666" /&gt;
-                                &lt;Setter Property="BorderBrush" Value="#333333" /&gt;
-                            &lt;/Trigger&gt;
-                        &lt;/ControlTemplate.Triggers&gt;
-                    &lt;/ControlTemplate&gt;
-                &lt;/Setter.Value&gt;
-            &lt;/Setter&gt;
-        &lt;/Style&gt;
-    &lt;/Window.Resources&gt;
+                                          Margin="{TemplateBinding Padding}" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#505050" />
+                                <Setter Property="BorderBrush" Value="#00A0FF" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#606060" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="#2A2A2A" />
+                                <Setter Property="Foreground" Value="#666666" />
+                                <Setter Property="BorderBrush" Value="#333333" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
-    &lt;Border Background="#2D2D30"
+    <Border Background="#2D2D30"
             BorderBrush="#007ACC"
             BorderThickness="2"
-            CornerRadius="8"&gt;
-        &lt;Grid Margin="10"&gt;
-            &lt;Grid.RowDefinitions&gt;
-                &lt;RowDefinition Height="Auto" /&gt;
-                &lt;RowDefinition Height="Auto" /&gt;
-                &lt;RowDefinition Height="*" /&gt;
-                &lt;RowDefinition Height="Auto" /&gt;
-            &lt;/Grid.RowDefinitions&gt;
+            CornerRadius="8">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-            &lt;!-- Title --&gt;
-            &lt;TextBlock Text="WinDeck"
+            <!-- Title -->
+            <TextBlock Text="WinDeck"
                        Grid.Row="0"
                        FontSize="18"
                        FontWeight="Bold"
                        Foreground="White"
                        HorizontalAlignment="Center"
-                       Margin="0,0,0,10" /&gt;
+                       Margin="0,0,0,10" />
 
-            &lt;!-- Search Box --&gt;
-            &lt;TextBox x:Name="SearchTextBox"
+            <!-- Search Box -->
+            <TextBox x:Name="SearchTextBox"
                      Grid.Row="1"
                      Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                      Background="#404040"
@@ -114,56 +114,56 @@
                      BorderThickness="1"
                      Padding="8,6"
                      FontSize="12"
-                     Margin="0,0,0,10"&gt;
-                &lt;TextBox.Style&gt;
-                    &lt;Style TargetType="TextBox"&gt;
-                        &lt;Setter Property="Template"&gt;
-                            &lt;Setter.Value&gt;
-                                &lt;ControlTemplate TargetType="TextBox"&gt;
-                                    &lt;Border Background="{TemplateBinding Background}"
+                     Margin="0,0,0,10">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TextBox">
+                                    <Border Background="{TemplateBinding Background}"
                                             BorderBrush="{TemplateBinding BorderBrush}"
                                             BorderThickness="{TemplateBinding BorderThickness}"
-                                            CornerRadius="4"&gt;
-                                        &lt;ScrollViewer x:Name="PART_ContentHost" /&gt;
-                                    &lt;/Border&gt;
-                                &lt;/ControlTemplate&gt;
-                            &lt;/Setter.Value&gt;
-                        &lt;/Setter&gt;
-                    &lt;/Style&gt;
-                &lt;/TextBox.Style&gt;
-            &lt;/TextBox&gt;
+                                            CornerRadius="4">
+                                        <ScrollViewer x:Name="PART_ContentHost" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
 
-            &lt;!-- Shortcuts Grid --&gt;
-            &lt;ScrollViewer Grid.Row="2"
+            <!-- Shortcuts Grid -->
+            <ScrollViewer Grid.Row="2"
                           VerticalScrollBarVisibility="Auto"
-                          HorizontalScrollBarVisibility="Disabled"&gt;
-                &lt;ItemsControl ItemsSource="{Binding ShortcutButtons}"&gt;
-                    &lt;ItemsControl.ItemsPanel&gt;
-                        &lt;ItemsPanelTemplate&gt;
-                            &lt;UniformGrid Columns="3" /&gt;
-                        &lt;/ItemsPanelTemplate&gt;
-                    &lt;/ItemsControl.ItemsPanel&gt;
-                    &lt;ItemsControl.ItemTemplate&gt;
-                        &lt;DataTemplate&gt;
-                            &lt;Button Style="{StaticResource ShortcutButtonStyle}"
+                          HorizontalScrollBarVisibility="Disabled">
+                <ItemsControl ItemsSource="{Binding ShortcutButtons}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="3" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource ShortcutButtonStyle}"
                                     Height="80"
                                     IsEnabled="{Binding IsEnabled}"
                                     Visibility="{Binding IsVisible, Converter={StaticResource BoolToVisConverter}}"
                                     Click="ShortcutButton_Click"
-                                    Tag="{Binding Number}" /&gt;
-                        &lt;/DataTemplate&gt;
-                    &lt;/ItemsControl.ItemTemplate&gt;
-                &lt;/ItemsControl&gt;
-            &lt;/ScrollViewer&gt;
+                                    Tag="{Binding Number}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
 
-            &lt;!-- Status/Help Text --&gt;
-            &lt;TextBlock Grid.Row="3"
+            <!-- Status/Help Text -->
+            <TextBlock Grid.Row="3"
                        Text="Press number keys (0-9) or click shortcuts • ESC to close"
                        FontSize="10"
                        Foreground="#CCCCCC"
                        HorizontalAlignment="Center"
                        TextAlignment="Center"
-                       Margin="0,10,0,0" /&gt;
-        &lt;/Grid&gt;
-    &lt;/Border&gt;
-&lt;/Window&gt;
+                       Margin="0,10,0,0" />
+        </Grid>
+    </Border>
+</Window>

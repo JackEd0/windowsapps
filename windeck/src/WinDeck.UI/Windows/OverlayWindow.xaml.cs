@@ -45,12 +45,10 @@ public partial class OverlayWindow : Window
         }
 
         _logger.LogInfo("OverlayWindow initialized");
-    }
-
-    /// <summary>
+    }    /// <summary>
     /// Event fired when a shortcut is activated
     /// </summary>
-    public event EventHandler<ShortcutActivatedEventArgs>? ShortcutActivated;
+    public event EventHandler<ViewModels.ShortcutActivatedEventArgs>? ShortcutActivated;
 
     /// <summary>
     /// Show the overlay with animation
@@ -143,9 +141,9 @@ public partial class OverlayWindow : Window
         _logger.LogDebug("ViewModel visibility changed to: {0}", _viewModel.IsVisible);
     }
 
-    private void OnShortcutActivated(object? sender, ShortcutActivatedEventArgs e)
+    private void OnShortcutActivated(object? sender, ViewModels.ShortcutActivatedEventArgs e)
     {
-        _logger.LogInfo("Shortcut activated: {0} - {1}", e.Number, e.Name);
+        _logger.LogInfo("Shortcut activated: {Number} - {Name}", e.Number, e.Name);
         ShortcutActivated?.Invoke(this, e);
     }
 

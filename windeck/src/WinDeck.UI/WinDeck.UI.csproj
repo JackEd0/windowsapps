@@ -1,18 +1,18 @@
-&lt;Project Sdk="Microsoft.NET.Sdk"&gt;
+<Project Sdk="Microsoft.NET.Sdk">
 
-  &lt;PropertyGroup&gt;
-    &lt;TargetFramework&gt;net8.0-windows&lt;/TargetFramework&gt;
-    &lt;UseWPF&gt;true&lt;/UseWPF&gt;
-    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
-    &lt;Nullable&gt;enable&lt;/Nullable&gt;
-  &lt;/PropertyGroup&gt;
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
-  &lt;ItemGroup&gt;
-    &lt;ProjectReference Include="..\WinDeck.Core\WinDeck.Core.csproj" /&gt;
-  &lt;/ItemGroup&gt;
+  <ItemGroup>
+    <ProjectReference Include="..\WinDeck.Core\WinDeck.Core.csproj" />
+  </ItemGroup>
 
-  &lt;ItemGroup&gt;
-    &lt;Reference Include="System.Windows.Forms" /&gt;
-  &lt;/ItemGroup&gt;
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
 
-&lt;/Project&gt;
+</Project>
